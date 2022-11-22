@@ -11,13 +11,25 @@ export default function HomePage() {
     <Section>
       <CustomCard bgColor="#101010" maxW="4xl">
         <Box align="center">
-        <Heading as="h1" size="4xl" color="#F6F5F6" align="center" cursor="pointer">
-          Welcome to
-        </Heading>
-        <Heading as="h1" size="4xl" color="primary.500" align="center" cursor="pointer">
-          Smart-ID
-        </Heading>
-        <Text color="#8C8E97">Create your account or login now !</Text>
+          <Heading
+            as="h1"
+            size="4xl"
+            color="#F6F5F6"
+            align="center"
+            cursor="pointer"
+          >
+            Welcome to
+          </Heading>
+          <Heading
+            as="h1"
+            size="4xl"
+            color="primary.500"
+            align="center"
+            cursor="pointer"
+          >
+            Smart-ID
+          </Heading>
+          <Text color="#8C8E97">Create your account or login now !</Text>
         </Box>
         <Box align="center" mt={{ base: 6, md: 9 }}>
           <Image
@@ -30,14 +42,14 @@ export default function HomePage() {
           />
           <Flex mt={9} mb={2} justify="center" gap={10}>
             <NextLink href="/login">
-            <Button size="lg" colorScheme="primary">
+              <Button size="lg" colorScheme="secondary">
                 Sign In
-            </Button>
+              </Button>
             </NextLink>
             <NextLink href="/register">
-            <Button size="lg" colorScheme="primary">
+              <Button size="lg" colorScheme="secondary">
                 Sign up
-            </Button>
+              </Button>
             </NextLink>
           </Flex>
         </Box>

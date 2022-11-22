@@ -54,7 +54,7 @@ export default function SignUpForm({ onSuccess, ...props }) {
         </Heading>
       </Section>
       <Section>
-        <CustomCard>
+        <CustomCard bgColor="#02020E">
           <Text fontSize="sm" color="gray.500" flexShrink="0">
             Register with your email
           </Text>
@@ -62,10 +62,12 @@ export default function SignUpForm({ onSuccess, ...props }) {
           <form onSubmit={onSignUp}>
             <Stack spacing={4}>
               <FormControl isRequired>
-                <FormLabel htmlFor="email">Email</FormLabel>
+                <FormLabel htmlFor="email" color="primary.500">Email</FormLabel>
                 <Input
                   type="email"
                   value={email}
+                  color="white"
+                  border="none"
                   placeholder="Enter email"
                   autoComplete="email"
                   onChange={(e) => setEmail(e.target.value)}
@@ -73,11 +75,13 @@ export default function SignUpForm({ onSuccess, ...props }) {
               </FormControl>
 
               <FormControl isRequired>
-                <FormLabel htmlFor="password">Password</FormLabel>
+                <FormLabel htmlFor="password" color="primary.500">Password</FormLabel>
                 <InputGroup size="md">
                   <Input
                     pr="4.5rem"
                     type="password"
+                    color="white"
+                    border="none"
                     placeholder="Enter password"
                     autoComplete="password"
                     value={password}
@@ -98,14 +102,12 @@ export default function SignUpForm({ onSuccess, ...props }) {
               </Button>
             </Flex>
 
-            {/* <Text fontSize="sm" color="gray.500" textAlign="center">
-              Already have an account?{" "}
+            <Text fontSize="sm" color="gray.500" textAlign="center">
+              Already have an account ?{" "}
               <NextLink href={`/login`} passHref>
-                <Link color="primary.500" fontWeight="medium">
-                  Login
-                </Link>
+                Login
               </NextLink>
-            </Text> */}
+            </Text>
           </form>
         </CustomCard>
       </Section>

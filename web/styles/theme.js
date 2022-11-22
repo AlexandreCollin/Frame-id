@@ -23,7 +23,7 @@ const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: "#000000",
+        bg: "#101010",
         color: "gray.800",
       },
     },
@@ -37,6 +37,7 @@ const theme = extendTheme({
     body: 'Inter, -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
     heading:
       'Inter, -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
+    color: "white"
   },
   fontWeights: {
     normal: 400,

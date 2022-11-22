@@ -52,7 +52,7 @@ export default function SignInPage({ onSuccess, ...props }) {
       </Heading>
     </Section>
     <Section>
-    <CustomCard >
+    <CustomCard bgColor="#02020E">
         <Text fontSize="sm" color="gray.500" flexShrink="0">
           Connect with your email
         </Text>
@@ -60,23 +60,27 @@ export default function SignInPage({ onSuccess, ...props }) {
       <form onSubmit={onSignIn}>
         <Stack spacing={4}>
           <FormControl isRequired>
-            <FormLabel htmlFor="email">Email</FormLabel>
+            <FormLabel htmlFor="email" color="primary.500">Email</FormLabel>
             <Input
               type="email"
               value={email}
+              color="white"
               placeholder="Enter email"
+              border="none"
               autoComplete="email"
               onChange={(e) => setEmail(e.target.value)}
             />
           </FormControl>
 
           <FormControl isRequired>
-            <FormLabel htmlFor="password">Password</FormLabel>
+            <FormLabel htmlFor="password" color="primary.500">Password</FormLabel>
             <InputGroup size="md">
               <Input
                 pr="4.5rem"
                 type="password"
                 placeholder="Enter password"
+                border="none"
+                color="white"
                 autoComplete="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -97,14 +101,12 @@ export default function SignInPage({ onSuccess, ...props }) {
           </Button>
         </Flex>
 
-        {/* <Text fontSize="sm" color="gray.500" textAlign="center">
+        <Text fontSize="sm" color="gray.500" textAlign="center">
           Not registered yet ?{" "}
-          <NextLink href={`/register`} passHref>
-            <Link color="primary.500" fontWeight="medium">
-              Register
-            </Link>
+          <NextLink href={`/register`} color="primary.500" fontWeight="medium" passHref>
+            Register
           </NextLink>
-        </Text> */}
+        </Text>
       </form>
       </CustomCard>
       </Section>
