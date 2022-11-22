@@ -7,6 +7,74 @@
 	},
 	"item": [
 		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Register",
+					"id": "708d5f3a-2b2f-4949-8bcd-f5de88708f67",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\": \"a@gmail.com\",\r\n\t\"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/auth/register",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"id": "0ff79d51-3c17-4207-842f-4ce7dec57907",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\": \"a@gmail.com\",\r\n\t\"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/auth/login",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "930994d9-d055-4e57-86ec-15b9d274225c"
+		},
+		{
 			"name": "Health",
 			"id": "a02ad8f3-8057-49db-82a0-fb834daeb47f",
 			"protocolProfileBehavior": {
@@ -16,15 +84,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8080/health",
-					"protocol": "http",
+					"raw": "{{endpoint}}/health",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"{{endpoint}}"
 					],
-					"port": "8080",
 					"path": [
 						"health"
 					]
