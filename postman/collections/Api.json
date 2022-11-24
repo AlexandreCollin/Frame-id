@@ -75,6 +75,73 @@
 			"id": "930994d9-d055-4e57-86ec-15b9d274225c"
 		},
 		{
+			"name": "docs",
+			"item": [
+				{
+					"name": "Id Card",
+					"id": "4b7f8b5f-68a9-4bff-8db9-c34ca5f6f409",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Toto",
+									"value": "tata",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/doc/id-card",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"doc",
+								"id-card"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "7aa9174b-4aee-42d5-92e3-5130a086305a"
+		},
+		{
+			"name": "Smart-contract",
+			"item": [
+				{
+					"name": "Id-card",
+					"id": "1e7b798a-53cd-429b-a39e-2d3cf2ce1c79",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/smart-contract/id-card/0x8500BAFfFc0182ec90cF36101035293191f95B28",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"smart-contract",
+								"id-card",
+								"0x8500BAFfFc0182ec90cF36101035293191f95B28"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "a95d2070-fc34-48a0-8980-359f308f869d"
+		},
+		{
 			"name": "Health",
 			"id": "a02ad8f3-8057-49db-82a0-fb834daeb47f",
 			"protocolProfileBehavior": {
@@ -83,6 +150,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
 				"url": {
 					"raw": "{{endpoint}}/health",
 					"host": [
